@@ -9,15 +9,15 @@ import java.io.PrintStream;
  */
 public class Board {
 
-private final GamePiece[] _board = {GamePiece.BLACK_ROOK, GamePiece.BLACK_KNIGHT, GamePiece.BLACK_BISHOP, GamePiece.BLACK_QUEEN, GamePiece.BLACK_KING, GamePiece.BLACK_BISHOP,GamePiece.BLACK_KNIGHT, GamePiece.BLACK_ROOK,
-        GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN,GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN,
-        GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,GamePiece.EMPTY, GamePiece.EMPTY,
-        GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,GamePiece.EMPTY, GamePiece.EMPTY,
-        GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,GamePiece.EMPTY, GamePiece.EMPTY,
-        GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,GamePiece.EMPTY, GamePiece.EMPTY,
-        GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN,GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN,
-        GamePiece.WHITE_ROOK, GamePiece.WHITE_KNIGHT, GamePiece.WHITE_BISHOP, GamePiece.WHITE_QUEEN, GamePiece.WHITE_KING, GamePiece.WHITE_BISHOP,GamePiece.WHITE_KNIGHT, GamePiece.WHITE_ROOK
-};
+    private final GamePiece[] _board = {GamePiece.BLACK_ROOK, GamePiece.BLACK_KNIGHT, GamePiece.BLACK_BISHOP, GamePiece.BLACK_QUEEN, GamePiece.BLACK_KING, GamePiece.BLACK_BISHOP, GamePiece.BLACK_KNIGHT, GamePiece.BLACK_ROOK,
+            GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN, GamePiece.BLACK_PAWN,
+            GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,
+            GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,
+            GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,
+            GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY,
+            GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN, GamePiece.WHITE_PAWN,
+            GamePiece.WHITE_ROOK, GamePiece.WHITE_KNIGHT, GamePiece.WHITE_BISHOP, GamePiece.WHITE_QUEEN, GamePiece.WHITE_KING, GamePiece.WHITE_BISHOP, GamePiece.WHITE_KNIGHT, GamePiece.WHITE_ROOK
+    };
 
     /**
      * Generates a string describing the game state in a FEN string suitable for consumption by a UCI engine.
