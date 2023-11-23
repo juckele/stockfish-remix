@@ -1,7 +1,7 @@
 package com.johnuckele.stockfishremix;
 
 public enum GamePiece {
-    EMPTY(Owner.NONE, Piece.NONE, "", " "),
+    EMPTY(Owner.NONE, Piece.NONE, "", "·"),
     BLACK_PAWN(Owner.BLACK, Piece.PAWN, "p", "♟"),
     BLACK_KNIGHT(Owner.BLACK, Piece.KNIGHT, "n", "♞"),
     BLACK_BISHOP(Owner.BLACK, Piece.BISHOP, "b", "♝"),
