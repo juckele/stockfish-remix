@@ -10,4 +10,16 @@ public class TerminalColor {
     public static final String COLOR_CODE(short code) {
         return "\033[38;5;"+code+"m";
     }
+
+    public static void println(String color, String output) {
+        System.out.print(color+output+COLOR_RESET+"\n");
+    }
+
+    public static void println(short color, String output) {
+        System.out.print(COLOR_CODE(color)+output+COLOR_RESET+"\n");
+    }
+
+    public static void print(short color, String output) {
+        System.out.print(COLOR_CODE(color)+output+COLOR_RESET);
+    }
 }

@@ -42,28 +42,28 @@ public class UCIHandler implements Runnable {
             System.out.println("Starting UCIHandler");
             while (true) {
                 if (pIn.available() > 0) {
-                    System.out.print(TerminalColor.COLOR_PURPLE + "Reading from pIn!\n" + TerminalColor.COLOR_RESET);
+                    TerminalColor.println(TerminalColor.COLOR_PURPLE, "Reading from pIn!");
                     String pString = new String(pIn.readNBytes(pIn.available()), StandardCharsets.UTF_8);
-                    System.out.print(TerminalColor.COLOR_CODE((short) 227) + pString + TerminalColor.COLOR_RESET);
+                    TerminalColor.print((short) 227, pString);
                     String[] lines = pString.split("\n");
                     for (String line : lines) {
                         if (line.equals(STOCKFISH_WELCOME_MESSAGE)) {
-                            System.out.println(TerminalColor.COLOR_CYAN + "Received the welcome message, the process is ready!" + TerminalColor.COLOR_RESET);
-                            System.out.println(TerminalColor.COLOR_GREEN + "Writing to pOut!" + TerminalColor.COLOR_RESET);
+                            TerminalColor.println(TerminalColor.COLOR_CYAN, "Received the welcome message, the process is ready!");
+                            TerminalColor.println(TerminalColor.COLOR_GREEN, "Writing to pOut!");
                             pOut.println(COMMAND_START_UCI);
-                            System.out.println(TerminalColor.COLOR_BLUE + COMMAND_START_UCI + TerminalColor.COLOR_RESET);
+                            TerminalColor.println(TerminalColor.COLOR_BLUE, COMMAND_START_UCI);
                             pOut.flush();
-                            System.out.println(TerminalColor.COLOR_GREEN + "Done writing to pOut!" + TerminalColor.COLOR_RESET);
+                            TerminalColor.println(TerminalColor.COLOR_GREEN, "Done writing to pOut!");
                         }
                         if (line.equals(STOCKFISH_UCI_OK_MESSAGE)) {
-                            System.out.print(TerminalColor.COLOR_CYAN + "Received the UCI ok message!\n" + TerminalColor.COLOR_RESET);
+                            TerminalColor.println(TerminalColor.COLOR_CYAN, "Received the UCI ok message!");
                         }
                     }
-                    System.out.print(TerminalColor.COLOR_PURPLE + "Done reading from pIn!\n" + TerminalColor.COLOR_RESET);
+                    TerminalColor.println(TerminalColor.COLOR_PURPLE, "Done reading from pIn!");
                 }
                 if (pErr.available() > 0) {
-                    System.out.print(TerminalColor.COLOR_PURPLE + "Reading from pErr!\n" + TerminalColor.COLOR_RESET);
-                    System.out.print(TerminalColor.COLOR_RED + pErr.readAllBytes() + TerminalColor.COLOR_RESET);
+                    TerminalColor.println(TerminalColor.COLOR_PURPLE , "Reading from pErr!\n" );
+                    TerminalColor.println(TerminalColor.COLOR_RED , pErr.readAllBytes().toString() );
                 }
             }
         } catch (IOException e) {
